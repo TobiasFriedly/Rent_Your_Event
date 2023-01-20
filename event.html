@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang=de dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bearbeiten</title>
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.ico" sizes="any">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header class="flex">
+
+        <div class="container-header">
+
+     
+
+        </div>
+
+
+        <nav class="container-header">
+            <a href="https://110018-2.web.fhgr.ch/">
+
+                <button id="homebtn">Home</button>
+                
+            </a>
+            <a href="/eventliste.html">
+
+                <button id="eventliste">Location finden</button>
+                
+            </a>
+            <a href="/event.html">
+
+                <button id="newEvent">Location erstellen</button>
+                
+            </a>
+
+            <button id="logout" onclick="logout()"> Logout </button>
+
+        </nav>
+
+    </header>
+    <h1 class="titel1">Mein Inserat</h1>
+   <p class="text">Du hast einen grossen Keller, einen coolen Balkon, einen heimeligen Garten oder sonst Platz zur Verfügung? Dann erstelle hier dein Inserat.</p> 
+
+    <p id="infoText"> </p>
+
+
+    <div id="userEvent">
+
+        <label for="name">Name</label> <br>
+        <input id="name" type="text" value=""> <br>
+
+        <label for="ort">Ort</label> <br>
+        <input id="ort" type="text" value=""> <br>
+
+        <label for="preis">Preis</label> <br>
+        <input id="preis" type="text" value=""> <br>
+
+        <label for="bild">Bild URL</label> <br>
+        <input id="bild" type="text" value=""> <br>
+        <img id="bild-vorschau" width="300px" src="" alt=""> <br>
+        <br> <br>
+
+        <label for="beschreibung">Beschreibung</label> <br>
+        <textarea id="beschreibung" name="beschreibung"> </textarea> <br> <br>
+
+        <button class="hidden" id="button-neue" onclick="newEvent()">Veröffentlichen</button>
+        <button class="hidden" id="button-aktualisieren" onclick="eventEdit()">Aktualisieren</button>
+        <button class="hidden" id="button-loeschen" onclick="deleteEvent()">Löschen</button>
+
+        <p id="nachricht"> </p>
+
+    </div>
+
+    <script src="js/event.js"></script>
+
+</body>
+
+</html>
